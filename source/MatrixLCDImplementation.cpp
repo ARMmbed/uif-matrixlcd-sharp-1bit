@@ -72,6 +72,7 @@ MatrixLCDImplementation::MatrixLCDImplementation()
     initControlSignals(LCD_Front_Buffer);
     initControlSignals(LCD_Back_Buffer);
 
+    // create FrameBuffer1Bit objects from memory buffers
     frameBuffer[0] = SharedPointer<FrameBuffer>(new FrameBuffer1Bit(startOfPixels(LCD_Front_Buffer),
                                                                     LCD_Width_Bits,
                                                                     LCD_Height_Rows,
@@ -81,6 +82,10 @@ MatrixLCDImplementation::MatrixLCDImplementation()
                                                                     LCD_Width_Bits,
                                                                     LCD_Height_Rows,
                                                                     LCD_Stride_Bytes));
+
+    // clear buffers
+    frameBuffer[0]->drawRectangle(0, LCD_Width_Bits, 0, LCD_Height_Rows, 0);
+    frameBuffer[1]->drawRectangle(0, LCD_Width_Bits, 0, LCD_Height_Rows, 0);
 }
 
 MatrixLCDImplementation::~MatrixLCDImplementation()

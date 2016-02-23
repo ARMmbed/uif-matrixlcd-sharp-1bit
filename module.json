@@ -1,0 +1,20 @@
+{
+  "name": "uif-matrixlcd-sharp-1bit",
+  "version": "6.1.1",
+  "description": "Sharp LS013B7DH03 driver implementing the UIFramework matrix LCD driver with 1-bit color depth.",
+  "keywords": [],
+  "author": "Marcus Chang <marcus.chang@arm.com>",
+  "repository": {
+    "url": "git@github.com:ARMmbed/uif-matrixlcd-sharp.git",
+    "type": "git"
+  },
+  "homepage": "https://github.com/ARMmbed/uif-matrixlcd-sharp",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "mbed-drivers": "~0.12.0",
+    "uif-framebuffer": "^1.0.0",
+    "wrd-output-compare": "^2.0.0",
+    "wrd-utilities": "^1.0.0",
+    "uif-matrixlcd": "*"
+  }
+}
